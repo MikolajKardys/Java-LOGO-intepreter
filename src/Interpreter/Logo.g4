@@ -1,7 +1,5 @@
 grammar Logo;
-/*
- * Parser Rules
- */
+
 
 input                    : (command)+;
 
@@ -42,20 +40,12 @@ procedureDeclare         : TO PROCEDURE_NAME (VARIABLE)* ?(input) END;
 
 procedureExecute         : PROCEDURE_NAME (expresion)*;
 
-/*
- * Lexer Rules
- */
-
-// logo commands
 
 EQUALS            : '=';
 GREATER_THAN      : '>';
 GREATER_EQUAL     : '>=';
 SMALLER_THAN      : '<';
 SMALLER_EQUAL     : '<=';
-
-WHILE             : ('WHILE' | 'while');
-IF                : ('IF' | 'if');
 
 PLUS              : '+';
 MINUS             : '-';
@@ -69,19 +59,20 @@ CLOSE_BRACKET     : ']';
 TO                : ('TO' | 'to');
 END               : ('END' | 'end');
 
-REPREAT           : ('REPEAT' | 'repeat');
 MAKE              : ('MAKE' | 'make');
-PRINT             : ('PRINT' | 'print');
+IF                : ('IF' | 'if');
+WHILE             : ('WHILE' | 'while');
+REPREAT           : ('REPEAT' | 'repeat');
 
-// turtle other commands
 PENUP             : ('PENUP' | 'penup' | 'pu');
 PENDOWN           : ('PENDOWN' | 'pendown' | 'pd');
 
-// turtle move commands
 FORWARD           : ('FORWARD' | 'forward' | 'fd');
 BACK              : ('BACK' | 'back' | 'bk');
 RIGHT             : ('RIGHT' | 'right' | 'rt');
 LEFT              : ('LEFT' | 'left' | 'lt');
+
+PRINT             : ('PRINT' | 'print');
 
 NUMBER            : [0-9]+;
 

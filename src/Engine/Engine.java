@@ -8,12 +8,9 @@ import java.util.List;
 public class Engine {
     private final Turtle turtle = new Turtle();
 
-
-
     public Turtle getTurtle(){
         return turtle;
     }
-
 
     private boolean isPenDown = true;
     public void setPenDown(boolean setDown){
@@ -34,20 +31,12 @@ public class Engine {
         return traceList;
     }
 
-    public void clearTraceList(){
-        traceList.clear();
-    }
-
     private final List<String> logs = new ArrayList<>();
     public void addLog(String log){
         logs.add(log);
     }
     public List<String> getLogs(){
         return logs;
-    }
-
-    public void resetTurtle(){
-        turtle.resetTurtle();
     }
 
     public void runCommands(){
